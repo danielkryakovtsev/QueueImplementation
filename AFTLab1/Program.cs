@@ -11,7 +11,7 @@ namespace AFTLab1
             var addedArray = Console.ReadLine().Split(" ").Select(i => Convert.ToInt32(i));
 
             IQueue<int> queue = new PureQueue<int>();
-            // IQueue<int> queue = new ArrayQueue<int>(); 
+            //IQueue<int> queue = new ArrayQueue<int>(); 
 
             foreach (var item in addedArray)
             {
