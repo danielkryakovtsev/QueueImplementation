@@ -1,9 +1,8 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-
-namespace AFTLab1
+﻿namespace AFTLab1
 {
+    using System;
+    using System.Linq;
+
     class Program
     {
         static void Main(string[] args)
@@ -29,7 +28,7 @@ namespace AFTLab1
 
             var elementBefore = queue.Peek();
             var i = 0;
-            while(queue.Count > 0)
+            while (queue.Count > 0)
             {
                 var current = queue.Dequeue();
                 result.Avg += ((double)current) / result.Count;
@@ -47,7 +46,8 @@ namespace AFTLab1
             Console.WriteLine(result.ToString());
         }
 
-        class Result {
+        class Result
+        {
             public int Count;
             public double Avg;
             public int Min;

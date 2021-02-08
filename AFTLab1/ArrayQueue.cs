@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
-
-namespace AFTLab1
+﻿namespace AFTLab1
 {
+    using System;
+
     public class ArrayQueue<T> : IQueue<T>
     {
         private readonly T[] _array;
