@@ -16,19 +16,29 @@ namespace AFTLab1
         }
 
         private QueueItem<T> Next { get; set; }
+        private QueueItem<T> Last { get; set; }
+
         private int _size;
 
         public PureQueue()
         {
             Next = null;
+            Last = null;
             _size = 0;
         }
 
         public int Count => _size;
 
         public void Enqueue(T obj)
-        {
-            Next = new QueueItem<T>(obj) { Next = Next };
+        { 
+            var newItem = new QueueItem<T>(obj);
+            if (Last != null)
+                Last.Next = newItem;
+
+            if (Next == null)
+                Next = newItem;
+            Last = newItem;
+
             _size++;
         }
 
